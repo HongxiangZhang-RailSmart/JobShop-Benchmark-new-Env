@@ -6,7 +6,7 @@ from scheduling_environment.job import Job
 from scheduling_environment.operation import Operation
 
 
-def parse(JobShop, instance, from_absolute_path=False):
+def parse_from_file(JobShop, instance, from_absolute_path=False):
     if not from_absolute_path:
         base_path = Path(__file__).parent.parent.absolute()
         data_path = base_path.joinpath('data' + instance)
@@ -29,10 +29,10 @@ def parse(JobShop, instance, from_absolute_path=False):
         for key, line in enumerate(data):
             if key >= number_total_jobs:
                 break
-            print('data', key, line)
+            # print('data', key, line)
             # Split data with multiple spaces as separator
             parsed_line = re.findall('\S+', line)
-            print("parsed_line", parsed_line)
+            # print("parsed_line", parsed_line)
             # Current item of the parsed line
             i = 1
             job = Job(job_id)
@@ -162,4 +162,4 @@ if __name__ == "__main__":
 
     sys.path.append("../Machine_scheduling_benchmarking/")
 
-    JobShop = parse(r"\fjsp\6_Fattahi\MFJS1.fjs", )
+    JobShop = parse_from_file(r"\fjsp\6_Fattahi\MFJS1.fjs", )

@@ -20,7 +20,7 @@ def load_job_shop_env(problem_instance: str, from_absolute_path=False) -> JobSho
     if '/fsp/' in problem_instance or '/jsp/' in problem_instance:
         jobShopEnv = parser_jsp_fsp.parse(jobShopEnv, problem_instance, from_absolute_path)
     elif '/fjsp/' in problem_instance:
-        jobShopEnv = parser_fjsp.parse(jobShopEnv, problem_instance, from_absolute_path)
+        jobShopEnv = parser_fjsp.parse_from_file(jobShopEnv, problem_instance, from_absolute_path)
     elif '/fjsp_sdst/' in problem_instance:
         jobShopEnv = parser_fjsp_sdst.parse(jobShopEnv, problem_instance, from_absolute_path)
     elif '/fajsp/' in problem_instance:
@@ -41,7 +41,7 @@ def load_FJSPEnv_from_case(lines, num_job, num_machine) -> JobShop:
 
 def load_FJSPEnv_from_file(filename) -> JobShop:
     FJSP_instance = JobShop()
-    FJSP_instance = parser_fjsp.parse(FJSP_instance, filename, False)
+    FJSP_instance = parser_fjsp.parse_from_file(FJSP_instance, filename, False)
     return FJSP_instance
 
 def create_stats_list(population, gen):

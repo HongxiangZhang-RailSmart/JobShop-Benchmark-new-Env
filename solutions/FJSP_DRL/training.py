@@ -1,33 +1,25 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2024/1/1 15:36
-# @Author  : Hongxinag Zhang
-# @Email   : hongxiang@my.swjtu.edu.cn
-# @File    : train_20240101.py
-# @Software: PyCharm
-
 import argparse
 import os
 import logging
 from solutions.helper_functions import load_parameters
-from data_parsers import parser_fajsp, parser_fjsp, parser_jsp_fsp
-from solutions.helper_functions import load_job_shop_env, load_FJSPEnv_from_case
-# from solutions.FJSP_DRL.load_data import nums_detec
+from solutions.FJSP_DRL.validate import validate, get_validate_env
 from solutions.FJSP_DRL.case_generator import CaseGenerator
-# from solutions.FJSP_DRL.env import FJSPEnv_new
-from solutions.FJSP_DRL.env_test import FJSPEnv_test
+import gym
 import solutions.FJSP_DRL.PPO_model as PPO_model
 import random
 import time
 import sys
 import torch
-import numpy as np
-# from visdom import Visdom
+import copy
+from collections import deque
+import pandas as pd
 from pathlib import Path
+import numpy as np
 # Add the base path to the Python module search path
 base_path = Path(__file__).resolve().parents[2]
 sys.path.append(str(base_path))
 
-# import parameter settings
+# import FJSP parameters
 
 PARAM_FILE = str(base_path) + "/configs/FJSP_DRL.toml"
 
@@ -37,20 +29,7 @@ def initialize_device(parameters: dict) -> torch.device:
         device_str = "cuda:0" if torch.cuda.is_available() else "cpu"
     return torch.device(device_str)
 
-def nums_detec(lines):
-    """
-    Count the number of jobs, machines and operations
-    """
-
-    num_opes = 0
-    for i in range(1, len(lines)):
-        num_opes += int(lines[i].strip().split()[0]) if lines[i] != "\n" else 0
-    line_split = lines[0].strip().split()
-    num_jobs = int(line_split[0])
-    num_mas = int(line_split[1])
-    return num_jobs, num_mas, num_opes
-
-def main(param_file: str = PARAM_FILE):
+def train_FJSP_DRL(param_file: str = PARAM_FILE):
     # print(os.path.abspath('..'))
     try:
         parameters = load_parameters(param_file)
@@ -75,12 +54,15 @@ def main(param_file: str = PARAM_FILE):
     train_parameters = parameters["train_parameters"]
     test_parameters = parameters["test_parameters"]
 
+    env_validation_parameters = copy.deepcopy(env_parameters)
+    env_validation_parameters["batch_size"] = env_parameters["valid_batch_size"]
+
     model_parameters["actor_in_dim"] = model_parameters["out_size_ma"] * 2 + model_parameters["out_size_ope"] * 2
     model_parameters["critic_in_dim"] = model_parameters["out_size_ma"] + model_parameters["out_size_ope"]
 
+
     num_jobs = env_parameters['num_jobs']
     num_machines = env_parameters['num_mas']
-
     opes_per_job_min = int(num_machines * 0.8)
     opes_per_job_max = int(num_machines * 1.2)
     print(num_jobs, num_machines)
@@ -88,39 +70,52 @@ def main(param_file: str = PARAM_FILE):
     memories = PPO_model.Memory()
     model = PPO_model.PPO(model_parameters, train_parameters, num_envs=env_parameters["batch_size"])
 
+    env_valid = get_validate_env(env_validation_parameters, train_parameters)  # Create an environment for validation
+    maxlen = 1  # Save the best model
+    best_models = deque()
+    makespan_best = float('inf')
+
+    # Generate data files and fill in the header
+    str_time = time.strftime("%Y%m%d_%H%M%S", time.localtime(time.time()))
+    save_path = './save/train_{0}'.format(str_time)
+    os.makedirs(save_path)
+
+    valid_results = []
+    valid_results_100 = []
+
     # Training part
     start_time = time.time()
-    Env_training = None
-    for i in range(1, train_parameters["max_iterations"]+1):
+    env_training = None
+    for i in range(1, train_parameters["max_iterations"] + 1):
         if (i - 1) % train_parameters["parallel_iter"] == 0:
             nums_ope = [random.randint(opes_per_job_min, opes_per_job_max) for _ in range(num_jobs)]
             case = CaseGenerator(num_jobs, num_machines, opes_per_job_min, opes_per_job_max, nums_ope=nums_ope)
-            JSPEnv_in_this_batch = [load_FJSPEnv_from_case(case.get_case(j)[0], num_jobs, num_machines) for j in range(env_parameters["batch_size"])]
-            Env_training = FJSPEnv_test(JSPEnv_in_this_batch, env_parameters)
-            print(Env_training.num_jobs, Env_training.num_opes)
-
-        for j in range(env_parameters['batch_size']):
-            Env_training.JSP_instance[j]._name = 'TrainStep' + str(i) + '-' + "case"+str(j+1)
+            env_training = gym.make('fjsp-v0', case=case, env_paras=env_parameters)
 
         # Get state and completion signal
-        state = Env_training.state
+        env_training.reset()
+        state = env_training.state
         done = False
-        dones = Env_training.done_batch
+        dones = env_training.done_batch
         last_time = time.time()
 
         # Schedule in parallel
         while ~done:
             with torch.no_grad():
                 actions = model.policy_old.act(state, memories, dones)
-            state, rewards, dones = Env_training.step(actions)
+            state, rewards, dones, _ = env_training.step(actions)
             done = dones.all()
             memories.rewards.append(rewards)
             memories.is_terminals.append(dones)
             # gpu_tracker.track()  # Used to monitor memory (of gpu)
-        print("step:", i, "spend_time:", time.time() - last_time)
-        print([Env_training.JSP_instance[i].makespan for i in range(Env_training.batch_size)])
+        print("spend_time: ", time.time() - last_time)
 
-        Env_training.reset()
+        # Verify the solution
+        gantt_result = env_training.validate_gantt()[0]
+        if not gantt_result:
+            print("Scheduling Error！！！！！！")
+        # print("Scheduling Finish")
+        env_training.reset()
 
         # if iter mod x = 0 then update the policy (x = 1 in paper)
         if i % train_parameters["update_timestep"] == 0:
@@ -128,12 +123,30 @@ def main(param_file: str = PARAM_FILE):
             print("reward: ", '%.3f' % reward, "; loss: ", '%.3f' % loss)
             memories.clear_memory()
 
-        #############
-        # Validate, every train_paras["save_timestep"]
+        # if iter mod x = 0 then validate the policy (x = 10 in paper)
+        if i % train_parameters["save_timestep"] == 0:
+            print('\nStart validating')
+            # Record the average results and the results on each instance
+            vali_result, vali_result_100 = validate(env_validation_parameters, env_valid, model.policy_old)
+            valid_results.append(vali_result.item())
+            valid_results_100.append(vali_result_100)
 
+            # Save the best model
+            if vali_result < makespan_best:
+                makespan_best = vali_result
+                if len(best_models) == maxlen:
+                    delete_file = best_models.popleft()
+                    os.remove(delete_file)
+                save_file = '{0}/save_best_{1}_{2}_{3}.pt'.format(save_path, num_jobs, num_machines, i)
+                best_models.append(save_file)
+                torch.save(model.policy.state_dict(), save_file)
+
+    # Save the data of training curve to files
+    data = pd.DataFrame(np.array(valid_results).transpose(), columns=["res"])
+    data_100 = pd.DataFrame(np.array(torch.stack(valid_results_100, dim=0).to('cpu')), columns=[i_col for i_col in range(100)])
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run FJSP_DRL")
+    parser = argparse.ArgumentParser(description="train FJSP_DRL")
     parser.add_argument(
         "config_file",
         metavar='-f',
@@ -144,4 +157,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    main(param_file=args.config_file)
+    train_FJSP_DRL(param_file=args.config_file)

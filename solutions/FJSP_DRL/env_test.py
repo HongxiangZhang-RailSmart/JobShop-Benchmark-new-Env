@@ -16,10 +16,8 @@ import numpy as np
 from pathlib import Path
 from dataclasses import dataclass
 
-from solutions.FJSP_DRL.load_data import load_fjs, nums_detec, load_fjs_case
 from scheduling_environment.jobShop import JobShop
-from solutions.FJSP_DRL.load_data import load_fjs_from_sim
-
+from solutions.FJSP_DRL.load_data import load_feats_from_sim
 
 # Add the base path to the Python module search path
 base_path = Path(__file__).resolve().parents[2]
@@ -72,7 +70,7 @@ def convert_feat_job_2_ope(feat_job_batch, opes_appertain_batch):
     """
     return feat_job_batch.gather(1, opes_appertain_batch)
 
-class FJSPEnv_new():
+class FJSPEnv_test():
 
     def __init__(self, JobShop_module, env_paras):
         # static
@@ -94,7 +92,7 @@ class FJSPEnv_new():
 
         # Extract features from each JobShop module
         for i in range(self.batch_size):
-            raw_features = load_fjs_from_sim(self.JSP_instance[i], self.num_mas, self.num_opes)
+            raw_features = load_feats_from_sim(self.JSP_instance[i], self.num_mas, self.num_opes)
             # print(raw_features[0].shape)
             for j in range(num_data):
                 tensors[j].append(raw_features[j].to(self.device))

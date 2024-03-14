@@ -1,4 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1664a7e1-7df7-48d7-b9d2-334a340abb6f" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env_training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/save/train_20240314_192906/song_10_5.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/FJSP_DRL.toml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/FJSP_DRL.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_parsers/parser_fjsp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_parsers/parser_fjsp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_FJSP_DRL.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_FJSP_DRL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/env_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/load_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/torch test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/train_20240101.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/train_20240101.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/helper_functions.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2aKK5f33K9E1eH9T8Hp2SbhLQyQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__init__.executor": "Run",
+    "Python.env_test.executor": "Run",
+    "Python.run_FJSP_DRL (1).executor": "Run",
+    "Python.run_FJSP_DRL.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.train (1).executor": "Run",
+    "Python.train.executor": "Run",
+    "Python.train_20240101.executor": "Run",
+    "Python.training.executor": "Run",
+    "Python.validate.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/work/Job Shop Scheduling - Benchmark/job-shop-benchmark-new-env/solutions/FJSP_DRL/save/train_20240314_192906",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\solutions\FJSP_DRL\save\train_20240314_192906" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_FJSP_DRL (1)">
+    <configuration name="env_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FJSP-NewEnv" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/env_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_FJSP_DRL (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FJSP-NewEnv" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_FJSP_DRL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_FJSP_DRL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Job_Shop_Scheduling_Benchmark_Environments_and_Instances" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main/run_FJSP_DRL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FJSP-NewEnv" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="training" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FJSP-NewEnv" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_FJSP_DRL (1)" />
+        <item itemvalue="Python.training" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.run_FJSP_DRL" />
+        <item itemvalue="Python.env_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="1664a7e1-7df7-48d7-b9d2-334a340abb6f" name="更改" comment="" />
+      <created>1710331698481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710331698481</updated>
+      <workItem from="1710331699519" duration="4524000" />
+      <workItem from="1710391548283" duration="25557000" />
+      <workItem from="1710422678008" duration="8614000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main/solutions/FJSP_DRL/env.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1710411573096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL.coverage" NAME="run_FJSP_DRL 覆盖结果" MODIFIED="1710428304030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test.coverage" NAME="env_test 覆盖结果" MODIFIED="1710427622110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test.coverage" NAME="test 覆盖结果" MODIFIED="1710428655132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training.coverage" NAME="training 覆盖结果" MODIFIED="1710430508509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train.coverage" NAME="train 覆盖结果" MODIFIED="1710333854568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$validate.coverage" NAME="validate 覆盖结果" MODIFIED="1710415740280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL__1_.coverage" NAME="run_FJSP_DRL (1) 覆盖结果" MODIFIED="1710430832434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train__1_.coverage" NAME="train (1) 覆盖结果" MODIFIED="1710411633596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Train Marshalling Optimization - DRL/fjsp-drl-main" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240101.coverage" NAME="train_20240101 覆盖结果" MODIFIED="1710392301578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+  </component>
 </project>
