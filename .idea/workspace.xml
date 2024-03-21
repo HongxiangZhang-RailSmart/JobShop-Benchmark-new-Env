@@ -5,26 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1664a7e1-7df7-48d7-b9d2-334a340abb6f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env_training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/save/train_20240314_192906/song_10_5.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData100_20_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData10_10_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData15_10_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData15_15_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData200_50_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_10_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_15_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_20_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData30_15_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData30_20_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData50_20_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData6_6_Seed200.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/JSSP_Env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/PPO_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/Params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/actor_critic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/agent_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/env_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/graphcnn_congForSJSSP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/mb_agg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/mlp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/permissibleLS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/train_20240315.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/uniform_instance_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/updateAdjMat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/updateEntTimeLB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/FJSP_DRL.toml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/FJSP_DRL.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_parsers/parser_fjsp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_parsers/parser_fjsp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_FJSP_DRL.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_FJSP_DRL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/env_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/env_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/load_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/torch test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/train_20240101.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/train_20240101.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_parsers/parser_jsp_fsp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_parsers/parser_jsp_fsp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduling_environment/jobShop.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheduling_environment/jobShop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduling_environment/machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheduling_environment/machine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/helper_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,43 +68,57 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2aKK5f33K9E1eH9T8Hp2SbhLQyQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.PPO_jssp_multiInstances.executor": "Run",
     "Python.__init__.executor": "Run",
+    "Python.env_test (1).executor": "Run",
     "Python.env_test.executor": "Run",
+    "Python.env_training.executor": "Run",
+    "Python.parser_jsp_fsp.executor": "Run",
+    "Python.permissibleLS.executor": "Run",
     "Python.run_FJSP_DRL (1).executor": "Run",
     "Python.run_FJSP_DRL.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.test_learned (1).executor": "Run",
+    "Python.test_learned.executor": "Run",
     "Python.train (1).executor": "Run",
     "Python.train.executor": "Run",
     "Python.train_20240101.executor": "Run",
+    "Python.train_20240315.executor": "Run",
+    "Python.training (1).executor": "Run",
     "Python.training.executor": "Run",
+    "Python.updateAdjMat.executor": "Run",
     "Python.validate.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/work/Job Shop Scheduling - Benchmark/job-shop-benchmark-new-env/solutions/FJSP_DRL/save/train_20240314_192906",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/work/Job Shop Scheduling - Benchmark/L2D-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyDependenciesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\data\jsp\nips" />
+      <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\solutions\JSP_Nips" />
       <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\solutions\FJSP_DRL\save\train_20240314_192906" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_FJSP_DRL (1)">
-    <configuration name="env_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.training">
+    <configuration name="env_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,12 +127,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/env_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/env_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_FJSP_DRL (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="permissibleLS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,12 +150,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_FJSP_DRL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/permissibleLS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,30 +164,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_FJSP_DRL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Job_Shop_Scheduling_Benchmark_Environments_and_Instances" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main/run_FJSP_DRL.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="train_20240315" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,12 +173,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/train_20240315.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,12 +196,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/FJSP_DRL" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/FJSP_DRL/training.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="updateAdjMat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FJSP-NewEnv" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/updateAdjMat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_FJSP_DRL (1)" />
         <item itemvalue="Python.training" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.run_FJSP_DRL" />
-        <item itemvalue="Python.env_test" />
+        <item itemvalue="Python.train_20240315" />
+        <item itemvalue="Python.env_test (1)" />
+        <item itemvalue="Python.updateAdjMat" />
+        <item itemvalue="Python.permissibleLS" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +260,13 @@
       <updated>1710331698481</updated>
       <workItem from="1710331699519" duration="4524000" />
       <workItem from="1710391548283" duration="25557000" />
-      <workItem from="1710422678008" duration="8614000" />
+      <workItem from="1710422678008" duration="9506000" />
+      <workItem from="1710481869986" duration="13146000" />
+      <workItem from="1710505790554" duration="6781000" />
+      <workItem from="1710517528710" duration="5272000" />
+      <workItem from="1710915015259" duration="17385000" />
+      <workItem from="1710952063953" duration="3756000" />
+      <workItem from="1710994440528" duration="26923000" />
     </task>
     <servers />
   </component>
@@ -249,15 +285,25 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_training.coverage" NAME="env_training 覆盖结果" MODIFIED="1710512797855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test.coverage" NAME="test 覆盖结果" MODIFIED="1710428655132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240315.coverage" NAME="train_20240315 覆盖结果" MODIFIED="1711024544337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL__1_.coverage" NAME="run_FJSP_DRL (1) 覆盖结果" MODIFIED="1710430832434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test_learned.coverage" NAME="test_learned 覆盖结果" MODIFIED="1710927720106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../L2D-7b2efbb1ffc960260b16952f2bed68e500765bf0" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240101.coverage" NAME="train_20240101 覆盖结果" MODIFIED="1710392301578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$permissibleLS.coverage" NAME="permissibleLS 覆盖结果" MODIFIED="1710997594254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1710411573096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL.coverage" NAME="run_FJSP_DRL 覆盖结果" MODIFIED="1710428304030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test.coverage" NAME="env_test 覆盖结果" MODIFIED="1710427622110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
-    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test.coverage" NAME="test 覆盖结果" MODIFIED="1710428655132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
-    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training.coverage" NAME="training 覆盖结果" MODIFIED="1710430508509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$updateAdjMat.coverage" NAME="updateAdjMat 覆盖结果" MODIFIED="1711011746403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test__1_.coverage" NAME="env_test (1) 覆盖结果" MODIFIED="1711022093106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training.coverage" NAME="training 覆盖结果" MODIFIED="1711024956627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train.coverage" NAME="train 覆盖结果" MODIFIED="1710333854568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training__1_.coverage" NAME="training (1) 覆盖结果" MODIFIED="1710489597961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test_learned__1_.coverage" NAME="test_learned (1) 覆盖结果" MODIFIED="1710928462514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../L2D-main" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$validate.coverage" NAME="validate 覆盖结果" MODIFIED="1710415740280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
-    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL__1_.coverage" NAME="run_FJSP_DRL (1) 覆盖结果" MODIFIED="1710430832434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train__1_.coverage" NAME="train (1) 覆盖结果" MODIFIED="1710411633596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Train Marshalling Optimization - DRL/fjsp-drl-main" />
-    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240101.coverage" NAME="train_20240101 覆盖结果" MODIFIED="1710392301578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$parser_jsp_fsp.coverage" NAME="parser_jsp_fsp 覆盖结果" MODIFIED="1710511217230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_parsers" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$PPO_jssp_multiInstances.coverage" NAME="PPO_jssp_multiInstances 覆盖结果" MODIFIED="1710996051925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../L2D-main" />
   </component>
 </project>

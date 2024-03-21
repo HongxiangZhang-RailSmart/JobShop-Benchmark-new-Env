@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" filepath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main/.idea/Job_Shop_Scheduling_Benchmark_Environments_and_Instances.iml" filepath="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main/.idea/Job_Shop_Scheduling_Benchmark_Environments_and_Instances.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Train Marshalling Optimization - DRL/fjsp-drl-main/.idea/fjsp-drl-main.iml" filepath="$PROJECT_DIR$/../../Train Marshalling Optimization - DRL/fjsp-drl-main/.idea/fjsp-drl-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../L2D-main/.idea/L2D-main.iml" filepath="$PROJECT_DIR$/../L2D-main/.idea/L2D-main.iml" />
     </modules>
   </component>
 </project>

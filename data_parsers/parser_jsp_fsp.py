@@ -71,3 +71,64 @@ def parse(JobShop, instance, from_absolute_path=False):
         JobShop.add_machine((Machine(id_machine)))
 
     return JobShop
+
+def parse_from_case(JobShop, data, n_j, n_m):
+    number_total_jobs = n_j
+    number_total_machines = n_m
+
+    JobShop.set_nr_of_jobs(number_total_jobs)
+    JobShop.set_nr_of_machines(number_total_machines)
+    precedence_relations = {}
+    job_id = 0
+    operation_id = 0
+
+    for key, line in enumerate(data):
+        if key >= number_total_jobs:
+            break
+        # Split data with multiple spaces as separator
+        parsed_line = re.findall('\S+', line)
+
+        # Current item of the parsed line
+        i = 0
+
+        job = Job(job_id)
+
+        while i < len(parsed_line):
+            # Current operation
+            operation = Operation(job, job_id, operation_id)
+            operation_options = 1
+            for operation_option_id in range(operation_options):
+                operation.add_operation_option(int(parsed_line[i]), int(parsed_line[i + 1]))
+            job.add_operation(operation)
+            JobShop.add_operation(operation)
+            if i != 0:
+                precedence_relations[operation_id] = [
+                    JobShop.get_operation(operation_id - 1)]
+            i += 2
+            operation_id += 1
+
+        JobShop.add_job(job)
+        job_id += 1
+
+    # Precedence Relations
+
+
+    for operation in JobShop.operations:
+        if operation.operation_id not in precedence_relations.keys():
+            precedence_relations[operation.operation_id] = []
+        operation.add_predecessors(
+            precedence_relations[operation.operation_id])
+
+    sequence_dependent_setup_times = [[[0 for r in range(len(JobShop.operations))] for t in range(len(JobShop.operations))]
+                                      for
+                                      m in range(number_total_machines)]
+
+    # Precedence Relations
+    JobShop.add_precedence_relations_operations(precedence_relations)
+    JobShop.add_sequence_dependent_setup_times(sequence_dependent_setup_times)
+
+    # Machines
+    for id_machine in range(0, number_total_machines):
+        JobShop.add_machine((Machine(id_machine)))
+
+    return JobShop

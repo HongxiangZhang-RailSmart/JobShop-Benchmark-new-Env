@@ -193,6 +193,16 @@ class JobShop:
         machine.add_operation_to_schedule_backfilling(
             operation, duration, self._sequence_dependent_setup_times)
 
+    def schedule_operation_on_machine_earliest(self, operation: Operation, machine_id, duration) -> None:
+        """Schedule an operation on a specific machine."""
+        machine = self.get_machine(machine_id)
+        if machine is None:
+            raise ValueError(
+                f"Invalid machine ID {machine_id}")
+
+        machine.add_operation_to_schedule_earliest(
+            operation, duration, self._sequence_dependent_setup_times)
+
     def schedule_operation_on_machine(self, operation: Operation, machine_id, duration) -> None:
         """Schedule an operation on a specific machine."""
         machine = self.get_machine(machine_id)

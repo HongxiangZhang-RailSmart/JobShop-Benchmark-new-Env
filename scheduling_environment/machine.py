@@ -159,6 +159,62 @@ class Machine:
 
         return None, None
 
+    def add_operation_to_schedule_earliest(self, operation: Operation, processing_time, sequence_dependent_setup_times):
+        """Add an operation to the scheduled operations list of the machine using backfilling."""
+
+        # find max finishing time predecessors
+        finishing_time_predecessors = operation.finishing_time_predecessors
+        finishing_time_machine = max([operation.scheduled_end_time for operation in self.scheduled_operations],
+                                     default=0)
+
+        setup_time = 0
+        if len(self.scheduled_operations) != 0:
+            setup_time = \
+                sequence_dependent_setup_times[self.machine_id][self.scheduled_operations[-1].operation_id][
+                    operation.operation_id]
+
+        # # find backfilling opportunity
+        start_time_backfilling, setup_time_backfilling = self.find_earliest_opportunity(
+            operation, finishing_time_predecessors, processing_time, sequence_dependent_setup_times)
+
+        if start_time_backfilling is not None:
+            start_time = start_time_backfilling
+            setup_time = setup_time_backfilling
+        else:
+            # find time when predecessors are finished and machine is available
+            start_time = max(finishing_time_predecessors,
+                             finishing_time_machine + setup_time)
+
+        operation.add_operation_scheduling_information(
+            self.machine_id, start_time, setup_time, processing_time)
+
+        self._processed_operations.append({
+            'operation': operation,
+            'start_time': start_time,
+            'end_time': start_time + processing_time,
+            'processing_time': processing_time,
+            'start_setup': start_time-setup_time,
+            'end_setup': start_time,
+            'setup_time': setup_time
+        })
+    def find_earliest_opportunity(self, operation, finishing_time_predecessors, duration,
+                                     sequence_dependent_setup_times):
+        """Find the earliest time to start the operation on this machine."""
+
+        if len(self.scheduled_operations) > 0:
+            scheduled_start_times = [ope.scheduling_information.get('start_time') for ope in self.scheduled_operations]
+            scheduled_end_times = [0] + [ope.scheduling_information.get('end_time') for ope in self.scheduled_operations]
+            gaps_between_operations = []
+            for i in range(len(scheduled_start_times)):
+                gaps_between_operations.append(scheduled_start_times[i] - max(finishing_time_predecessors, scheduled_end_times[i]))
+            for i in range(len(gaps_between_operations)):
+                if gaps_between_operations[i] >= duration:
+                    insert_start_time = max(finishing_time_predecessors, scheduled_end_times[i])
+                    insert_end_time = insert_start_time + duration
+                    return insert_start_time, 0
+
+        return None, None
+
     def unschedule_operation(self, operation: Operation):
         """Remove an operation from the scheduled operations list of the machine."""
         self._processed_operations.remove(operation)

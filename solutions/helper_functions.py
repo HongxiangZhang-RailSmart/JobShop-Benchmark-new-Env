@@ -44,6 +44,17 @@ def load_FJSPEnv_from_file(filename) -> JobShop:
     FJSP_instance = parser_fjsp.parse_from_file(FJSP_instance, filename, False)
     return FJSP_instance
 
+def load_NipsJSPEnv_from_file(filename) -> JobShop:
+    JSP_instance = JobShop()
+    JSP_instance = parser_jsp_fsp.parse(JSP_instance, filename, False)
+    return JSP_instance
+
+def load_NipsJSPEnv_from_case(lines, num_job, num_machine) -> JobShop:
+    JSP_instance = JobShop()
+    JSP_instance = parser_jsp_fsp.parse_from_case(JSP_instance, lines, num_job, num_machine)
+    return JSP_instance
+
+
 def create_stats_list(population, gen):
     stats_list = []
     for ind in population:
