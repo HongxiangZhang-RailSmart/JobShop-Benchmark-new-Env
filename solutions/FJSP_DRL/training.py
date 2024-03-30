@@ -77,7 +77,7 @@ def train_FJSP_DRL(param_file: str = PARAM_FILE):
 
     # Generate data files and fill in the header
     str_time = time.strftime("%Y%m%d_%H%M%S", time.localtime(time.time()))
-    save_path = './save/train_{0}'.format(str_time)
+    save_path = str(base_path)+'/save/FJSP_DRL/train_{0}'.format(str_time)
     os.makedirs(save_path)
 
     valid_results = []
