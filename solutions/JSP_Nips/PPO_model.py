@@ -1,13 +1,25 @@
 import torch
-from agent_utils import eval_actions
-
-from Params import configs
-from actor_critic import ActorCritic
+from solutions.JSP_Nips.agent_utils import eval_actions
+# from solutions.JSP_Nips.Params import configs
+from solutions.JSP_Nips.actor_critic import ActorCritic
 from copy import deepcopy
 import torch.nn as nn
-from mb_agg import *
+from solutions.JSP_Nips.mb_agg import *
+from solutions.helper_functions import load_parameters
+from pathlib import Path
+import sys
 
-device = torch.device(configs.device)
+base_path = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_path))
+
+param_file = str(base_path) + "/configs/Nips_JSP.toml"
+parameters = load_parameters(param_file)
+env_parameters = parameters["env_parameter"]
+model_parameters = parameters["network_parameter"]
+train_parameters = parameters["train_parameter"]
+test_parameters = parameters["test_parameter"]
+
+device = torch.device(env_parameters["device"])
 
 
 class Memory:
@@ -76,16 +88,16 @@ class PPO:
         self.policy_old.load_state_dict(self.policy.state_dict())
         self.optimizer = torch.optim.Adam(self.policy.parameters(), lr=lr)
         self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer,
-                                                         step_size=configs.decay_step_size,
-                                                         gamma=configs.decay_ratio)
+                                                         step_size=train_parameters["decay_step_size"],
+                                                         gamma=train_parameters["decay_ratio"])
 
         self.V_loss_2 = nn.MSELoss()
 
     def update(self, memories, n_tasks, g_pool):
 
-        vloss_coef = configs.vloss_coef
-        ploss_coef = configs.ploss_coef
-        entloss_coef = configs.entloss_coef
+        vloss_coef = train_parameters["vloss_coef"]
+        ploss_coef = train_parameters["ploss_coef"]
+        entloss_coef = train_parameters["entloss_coef"]
 
         rewards_all_env = []
         adj_mb_t_all_env = []
@@ -153,6 +165,6 @@ class PPO:
 
         # Copy new weights into old policy:
         self.policy_old.load_state_dict(self.policy.state_dict())
-        if configs.decayflag:
+        if train_parameters["decayflag"]:
             self.scheduler.step()
         return loss_sum.mean().item(), vloss_sum.mean().item()

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from mlp import MLP
+from solutions.JSP_Nips.mlp import MLP
 # import sys
 # sys.path.append("models/")
 

@@ -1,10 +1,13 @@
 import torch.nn as nn
-from mlp import MLPActor
-from mlp import MLPCritic
+from solutions.JSP_Nips.mlp import MLPActor
+from solutions.JSP_Nips.mlp import MLPCritic
 import torch.nn.functional as F
-from graphcnn_congForSJSSP import GraphCNN
+from solutions.JSP_Nips.graphcnn_congForSJSSP import GraphCNN
+from solutions.helper_functions import load_parameters
+from pathlib import Path
+import sys
 import torch
-from Params import configs
+# from solutions.JSP_Nips.Params import configs
 
 class ActorCritic(nn.Module):
     def __init__(self,
@@ -86,20 +89,29 @@ class ActorCritic(nn.Module):
 
 
 if __name__ == '__main__':
+    base_path = Path(__file__).resolve().parents[2]
+    sys.path.append(str(base_path))
+
+    param_file = str(base_path) + "/configs/Nips_JSP.toml"
+    parameters = load_parameters(param_file)
+    env_parameters = parameters["env_parameter"]
+    model_parameters = parameters["network_parameter"]
+    train_parameters = parameters["train_parameter"]
+    test_parameters = parameters["test_parameter"]
     ac = ActorCritic(
-              n_j=configs.n_j,
-              n_m=configs.n_m,
-              num_layers=configs.num_layers,
-              neighbor_pooling_type=configs.neighbor_pooling_type,
-              input_dim=configs.input_dim,
-              hidden_dim=configs.hidden_dim,
-              num_mlp_layers_feature_extract=configs.num_mlp_layers_feature_extract,
-              num_mlp_layers_actor=configs.num_mlp_layers_actor,
-              hidden_dim_actor=configs.hidden_dim_actor,
-              num_mlp_layers_critic=configs.num_mlp_layers_critic,
-              hidden_dim_critic=configs.hidden_dim_critic,
-              device=torch.device(configs.device),
+              n_j=env_parameters["n_j"],
+              n_m=env_parameters["n_m"],
+              num_layers=model_parameters["num_layers"],
+              neighbor_pooling_type=model_parameters["neighbor_pooling_type"],
+              input_dim=model_parameters["input_dim"],
+              hidden_dim=model_parameters["hidden_dim"],
+              num_mlp_layers_feature_extract=model_parameters["num_mlp_layers_feature_extract"],
+              num_mlp_layers_actor=model_parameters["num_mlp_layers_actor"],
+              hidden_dim_actor=model_parameters["hidden_dim_actor"],
+              num_mlp_layers_critic=model_parameters["num_mlp_layers_critic"],
+              hidden_dim_critic=model_parameters["hidden_dim_critic"],
+              device=torch.device(env_parameters["device"]),
         learn_eps=False
     )
     print(ac)
-    print('Go home')
+    print('?? Go home')

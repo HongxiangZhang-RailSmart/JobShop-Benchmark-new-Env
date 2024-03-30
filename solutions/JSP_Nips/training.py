@@ -1,56 +1,65 @@
 import time
 import sys
 import numpy as np
-from Params import configs
-from PPO_model import PPO, Memory
-from agent_utils import select_action
-from mb_agg import *
-from validation import validate
-from JSSP_Env import SJSSP
-from uniform_instance_gen import uni_instance_gen
+# from solutions.JSP_Nips.Params import configs
+from solutions.JSP_Nips.PPO_model import PPO, Memory
+from solutions.JSP_Nips.agent_utils import select_action
+from solutions.JSP_Nips.mb_agg import *
+from solutions.JSP_Nips.validation import validate
+from solutions.JSP_Nips.JSSP_Env import SJSSP
+from solutions.JSP_Nips.uniform_instance_gen import uni_instance_gen
 from pathlib import Path
+from solutions.helper_functions import load_parameters
 
 base_path = Path(__file__).resolve().parents[2]
 sys.path.append(str(base_path))
-device = torch.device(configs.device)
+
+param_file = str(base_path) + "/configs/Nips_JSP.toml"
+parameters = load_parameters(param_file)
+env_parameters = parameters["env_parameter"]
+model_parameters = parameters["network_parameter"]
+train_parameters = parameters["train_parameter"]
+device = torch.device(env_parameters["device"])
 
 
 def main():
+    n_job = env_parameters["n_j"]
+    n_machine = env_parameters["n_m"]
 
-    envs = [SJSSP(n_j=configs.n_j, n_m=configs.n_m) for _ in range(configs.num_envs)]
+    envs = [SJSSP(n_j=n_job, n_m=n_machine) for _ in range(train_parameters["num_envs"])]
 
     data_generator = uni_instance_gen
     file_path = str(base_path) + '/data/jsp/nips/'
-    dataLoaded = np.load(file_path+'generatedData' + str(configs.n_j) + '_' + str(configs.n_m) + '_Seed' + str(
-        configs.np_seed_validation) + '.npy')
+    dataLoaded = np.load(file_path+'generatedData' + str(env_parameters["n_j"]) + '_' + str(env_parameters["n_m"])
+                         + '_Seed' + str(env_parameters["np_seed_validation"]) + '.npy')
     vali_data = []
     for i in range(dataLoaded.shape[0]):
         vali_data.append((dataLoaded[i][0], dataLoaded[i][1]))
 
-    torch.manual_seed(configs.torch_seed)
+    torch.manual_seed(env_parameters["torch_seed"])
     if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(configs.torch_seed)
-    np.random.seed(configs.np_seed_train)
+        torch.cuda.manual_seed_all(env_parameters["torch_seed"])
+    np.random.seed(env_parameters["np_seed_train"])
 
-    memories = [Memory() for _ in range(configs.num_envs)]
+    memories = [Memory() for _ in range(train_parameters["num_envs"])]
 
-    ppo = PPO(configs.lr, configs.gamma, configs.k_epochs, configs.eps_clip,
-              n_j=configs.n_j,
-              n_m=configs.n_m,
-              num_layers=configs.num_layers,
-              neighbor_pooling_type=configs.neighbor_pooling_type,
-              input_dim=configs.input_dim,
-              hidden_dim=configs.hidden_dim,
-              num_mlp_layers_feature_extract=configs.num_mlp_layers_feature_extract,
-              num_mlp_layers_actor=configs.num_mlp_layers_actor,
-              hidden_dim_actor=configs.hidden_dim_actor,
-              num_mlp_layers_critic=configs.num_mlp_layers_critic,
-              hidden_dim_critic=configs.hidden_dim_critic)
+    ppo = PPO(train_parameters["lr"], train_parameters["gamma"], train_parameters["k_epochs"],
+              train_parameters["eps_clip"],
+              n_j=n_job,
+              n_m=n_machine,
+              num_layers=model_parameters["num_layers"],
+              neighbor_pooling_type=model_parameters["neighbor_pooling_type"],
+              input_dim=model_parameters["input_dim"],
+              hidden_dim=model_parameters["hidden_dim"],
+              num_mlp_layers_feature_extract=model_parameters["num_mlp_layers_feature_extract"],
+              num_mlp_layers_actor=model_parameters["num_mlp_layers_actor"],
+              hidden_dim_actor=model_parameters["hidden_dim_actor"],
+              num_mlp_layers_critic=model_parameters["num_mlp_layers_critic"],
+              hidden_dim_critic=model_parameters["hidden_dim_critic"])
     print(ppo.policy)
-    g_pool_step = g_pool_cal(graph_pool_type=configs.graph_pool_type,
-                             batch_size=torch.Size([1, configs.n_j * configs.n_m, configs.n_j * configs.n_m]),
-                             n_nodes=configs.n_j * configs.n_m,
-                             device=device)
+    g_pool_step = g_pool_cal(graph_pool_type=model_parameters["graph_pool_type"],
+                             batch_size=torch.Size([1, n_job * n_machine, n_job * n_machine]),
+                             n_nodes=n_job * n_machine, device=device)
     # print(g_pool_step)
     # training loop
     log = []
@@ -58,11 +67,11 @@ def main():
     optimal_gaps = []
     optimal_gap = 1
     record = 100000
-    for i_update in range(configs.max_updates):
+    for i_update in range(train_parameters["max_updates"]):
 
         t3 = time.time()
 
-        ep_rewards = [0 for _ in range(configs.num_envs)]
+        ep_rewards = [0 for _ in range(train_parameters["num_envs"])]
         adj_envs = []
         fea_envs = []
         candidate_envs = []
@@ -70,7 +79,7 @@ def main():
 
         for i, env in enumerate(envs):
             adj, fea, candidate, mask = env.reset(
-                data_generator(n_j=configs.n_j, n_m=configs.n_m, low=configs.low, high=configs.high))
+                data_generator(n_j=n_job, n_m=n_machine, low=env_parameters['low'], high=env_parameters["high"]))
             adj_envs.append(adj)
             fea_envs.append(fea)
             candidate_envs.append(candidate)
@@ -82,13 +91,11 @@ def main():
             adj_tensor_envs = [torch.from_numpy(np.copy(adj)).to(device).to_sparse() for adj in adj_envs]
             candidate_tensor_envs = [torch.from_numpy(np.copy(candidate)).to(device) for candidate in candidate_envs]
             mask_tensor_envs = [torch.from_numpy(np.copy(mask)).to(device) for mask in mask_envs]
-            # print(envs[0].number_of_tasks)
-            # print('shape', candidate_tensor_envs[0].shape, mask_tensor_envs[0].shape)
+
             with torch.no_grad():
                 action_envs = []
                 a_idx_envs = []
-                for i in range(configs.num_envs):  # 对每个env，计算当前状态下的动作选择结果
-                    # print('old', fea_tensor_envs[i].shape, adj_tensor_envs[i].shape)
+                for i in range(train_parameters["num_envs"]):
 
                     pi, xxx = ppo.policy_old(x=fea_tensor_envs[i],
                                              graph_pool=g_pool_step,
@@ -101,12 +108,12 @@ def main():
                     action_envs.append(action)
                     a_idx_envs.append(a_idx)
 
-            adj_envs = []  # 每一step每个env的结果 所以最大长度就是num_evns
+            adj_envs = []
             fea_envs = []
             candidate_envs = []
             mask_envs = []
             # Saving episode data
-            for i in range(configs.num_envs):  # 先把当前状态写入memory 再根据action推进env，
+            for i in range(train_parameters["num_envs"]):
                 memories[i].adj_mb.append(adj_tensor_envs[i])
                 memories[i].fea_mb.append(fea_tensor_envs[i])
                 memories[i].candidate_mb.append(candidate_tensor_envs[i])
@@ -124,18 +131,18 @@ def main():
                 memories[i].done_mb.append(done)
             if envs[0].done():
                 break
-        for j in range(configs.num_envs):
+        for j in range(train_parameters["num_envs"]):
             ep_rewards[j] -= envs[j].posRewards
 
-        loss, v_loss = ppo.update(memories, configs.n_j * configs.n_m, configs.graph_pool_type)
+        loss, v_loss = ppo.update(memories, n_job * n_machine, model_parameters["graph_pool_type"])
         for memory in memories:
             memory.clear_memory()
         mean_rewards_all_env = sum(ep_rewards) / len(ep_rewards)
         log.append([i_update, mean_rewards_all_env])
         if (i_update + 1) % 100 == 0:
             file_writing_obj = open(
-                './' + 'log_' + str(configs.n_j) + '_' + str(configs.n_m) + '_' + str(configs.low) + '_' + str(
-                    configs.high) + '.txt', 'w')
+                './' + 'log_' + str(n_job) + '_' + str(n_machine) + '_' + str(env_parameters["low"]) + '_' + str(
+                    env_parameters["high"]) + '.txt', 'w')
             file_writing_obj.write(str(log))
 
         # log results
@@ -149,12 +156,12 @@ def main():
             validation_log.append(vali_result)
             if vali_result < record:
                 torch.save(ppo.policy.state_dict(), './{}.pth'.format(
-                    str(configs.n_j) + '_' + str(configs.n_m) + '_' + str(configs.low) + '_' + str(configs.high)))
+                    str(n_job) + '_' + str(n_machine) + '_' + str(env_parameters["low"]) + '_' + str(env_parameters["high"])))
                 record = vali_result
             print('The validation quality is:', vali_result)
             file_writing_obj1 = open(
-                './' + 'vali_' + str(configs.n_j) + '_' + str(configs.n_m) + '_' + str(configs.low) + '_' + str(
-                    configs.high) + '.txt', 'w')
+                './' + 'vali_' + str(n_job) + '_' + str(n_machine) + '_' + str(env_parameters["low"]) + '_' + str(
+                    env_parameters["high"]) + '.txt', 'w')
             file_writing_obj1.write(str(validation_log))
         t5 = time.time()
 

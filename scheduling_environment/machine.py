@@ -197,6 +197,7 @@ class Machine:
             'end_setup': start_time,
             'setup_time': setup_time
         })
+
     def find_earliest_opportunity(self, operation, finishing_time_predecessors, duration,
                                      sequence_dependent_setup_times):
         """Find the earliest time to start the operation on this machine."""

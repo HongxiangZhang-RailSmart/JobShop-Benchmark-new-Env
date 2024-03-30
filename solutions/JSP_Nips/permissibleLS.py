@@ -1,5 +1,15 @@
-from Params import configs
+# from solutions.JSP_Nips.Params import configs
 import numpy as np
+from solutions.helper_functions import load_parameters
+from pathlib import Path
+import sys
+
+from pathlib import Path
+base_path = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_path))
+param_file = str(base_path) + "/configs/Nips_JSP.toml"
+parameters = load_parameters(param_file)
+env_parameters = parameters["env_parameter"]
 
 
 def permissibleLeftShift(a, durMat, mchMat, mchsStartTimes, opIDsOnMchs):
@@ -31,7 +41,7 @@ def permissibleLeftShift(a, durMat, mchMat, mchsStartTimes, opIDsOnMchs):
 def putInTheEnd(a, jobRdyTime_a, mchRdyTime_a, startTimesForMchOfa, opsIDsForMchOfa):
     # index = first position of -config.high in startTimesForMchOfa
     # print('Yes!OK!')
-    index = np.where(startTimesForMchOfa == -configs.high)[0][0]
+    index = np.where(startTimesForMchOfa == -env_parameters["high"])[0][0]
     startTime_a = max(jobRdyTime_a, mchRdyTime_a)
     startTimesForMchOfa[index] = startTime_a
     opsIDsForMchOfa[index] = a
@@ -110,7 +120,7 @@ if __name__ == "__main__":
     print()
 
     # start time of operations on machines
-    mchsStartTimes = -configs.high * np.ones_like(data[0].transpose(), dtype=np.int32)
+    mchsStartTimes = -env_parameters["high"] * np.ones_like(data[0].transpose(), dtype=np.int32)
     # Ops ID on machines
     opIDsOnMchs = -n_j * np.ones_like(data[0].transpose(), dtype=np.int32)
 

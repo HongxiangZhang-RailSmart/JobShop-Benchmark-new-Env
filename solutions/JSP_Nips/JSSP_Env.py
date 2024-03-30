@@ -1,12 +1,24 @@
 import gym
 import numpy as np
 from gym.utils import EzPickle
-from uniform_instance_gen import override
-from updateEntTimeLB import calEndTimeLB
-from Params import configs
-from permissibleLS import permissibleLeftShift
-from updateAdjMat import getActionNbghs
+from solutions.JSP_Nips.uniform_instance_gen import override
+from solutions.JSP_Nips.updateEntTimeLB import calEndTimeLB
+# from solutions.JSP_Nips.Params import configs
+from solutions.JSP_Nips.permissibleLS import permissibleLeftShift
+from solutions.JSP_Nips.updateAdjMat import getActionNbghs
+from solutions.helper_functions import load_parameters
+from pathlib import Path
+import sys
 
+base_path = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_path))
+
+param_file = str(base_path) + "/configs/Nips_JSP.toml"
+parameters = load_parameters(param_file)
+env_parameters = parameters["env_parameter"]
+model_parameters = parameters["network_parameter"]
+train_parameters = parameters["train_parameter"]
+test_parameters = parameters["test_parameter"]
 
 class SJSSP(gym.Env, EzPickle):
     def __init__(self,
@@ -70,11 +82,11 @@ class SJSSP(gym.Env, EzPickle):
                 self.adj[succd, precd] = 0
 
         # prepare for return
-        fea = np.concatenate((self.LBs.reshape(-1, 1)/configs.et_normalize_coef,
+        fea = np.concatenate((self.LBs.reshape(-1, 1)/env_parameters["et_normalize_coef"],
                               self.finished_mark.reshape(-1, 1)), axis=1)
         reward = - (self.LBs.max() - self.max_endTime)
         if reward == 0:
-            reward = configs.rewardscale
+            reward = env_parameters["rewardscale"]
             self.posRewards += reward
         self.max_endTime = self.LBs.max()
 
@@ -104,11 +116,11 @@ class SJSSP(gym.Env, EzPickle):
 
         # initialize features
         self.LBs = np.cumsum(self.dur, axis=1, dtype=np.single)
-        self.initQuality = self.LBs.max() if not configs.init_quality_flag else 0
+        self.initQuality = self.LBs.max() if not env_parameters["init_quality_flag"] else 0
         self.max_endTime = self.initQuality
         self.finished_mark = np.zeros_like(self.m, dtype=np.single)
 
-        fea = np.concatenate((self.LBs.reshape(-1, 1)/configs.et_normalize_coef,
+        fea = np.concatenate((self.LBs.reshape(-1, 1)/env_parameters["et_normalize_coef"],
                               # self.dur.reshape(-1, 1)/configs.high,
                               # wkr.reshape(-1, 1)/configs.wkr_normalize_coef,
                               self.finished_mark.reshape(-1, 1)), axis=1)
@@ -119,7 +131,7 @@ class SJSSP(gym.Env, EzPickle):
         self.mask = np.full(shape=self.number_of_jobs, fill_value=0, dtype=bool)
 
         # start time of operations on machines
-        self.mchsStartTimes = -configs.high * np.ones_like(self.dur.transpose(), dtype=np.int32)
+        self.mchsStartTimes = -env_parameters["high"] * np.ones_like(self.dur.transpose(), dtype=np.int32)
         # Ops ID on machines
         self.opIDsOnMchs = -self.number_of_jobs * np.ones_like(self.dur.transpose(), dtype=np.int32)
 

@@ -1,6 +1,6 @@
 import os
 import tomli
-
+import numpy as np
 import pandas as pd
 
 from scheduling_environment.jobShop import JobShop
@@ -53,6 +53,23 @@ def load_NipsJSPEnv_from_case(lines, num_job, num_machine) -> JobShop:
     JSP_instance = JobShop()
     JSP_instance = parser_jsp_fsp.parse_from_case(JSP_instance, lines, num_job, num_machine)
     return JSP_instance
+
+def convert_uni_instance_to_lines(generated_data: np.ndarray, n_j: int, n_m: int):
+    lines = []
+    # line_1_size = '{0}\t{1}\n'.format(configs.n_j, configs.n_m)
+    # lines.append(line_1_size)
+    process_time = generated_data[0]
+    assigned_machine = generated_data[1]
+
+    for i in range(n_j):
+        line_job = []
+        for j in range(n_m):
+            line_job.append(assigned_machine[i, j]-1) # In generated data, machine id is indexed from 1.
+            line_job.append(process_time[i, j])
+        str_line = " ".join([str(val) for val in line_job])
+        lines.append(str_line + '\n')
+
+    return lines
 
 
 def create_stats_list(population, gen):
