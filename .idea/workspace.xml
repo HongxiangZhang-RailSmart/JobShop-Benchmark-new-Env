@@ -5,54 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1664a7e1-7df7-48d7-b9d2-334a340abb6f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData100_20_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData10_10_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData15_10_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData15_15_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData200_50_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_10_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_15_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData20_20_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData30_15_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData30_20_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData50_20_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jsp/nips/generatedData6_6_Seed200.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/JSSP_Env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/PPO_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/Params.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/actor_critic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/agent_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/env_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/graphcnn_congForSJSSP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/mb_agg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/mlp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/permissibleLS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/train_20240315.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/uniform_instance_gen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/updateAdjMat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/updateEntTimeLB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/JSP_Nips/validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FJSP-NewEnv.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_parsers/parser_jsp_fsp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_parsers/parser_jsp_fsp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduling_environment/jobShop.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheduling_environment/jobShop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_Nips_JSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_Nips_JSP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scheduling_environment/machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheduling_environment/machine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FJSP_DRL/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/helper_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -73,43 +54,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.PPO_jssp_multiInstances.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.env_test (1).executor": "Run",
-    "Python.env_test.executor": "Run",
-    "Python.env_training.executor": "Run",
-    "Python.parser_jsp_fsp.executor": "Run",
-    "Python.permissibleLS.executor": "Run",
-    "Python.run_FJSP_DRL (1).executor": "Run",
-    "Python.run_FJSP_DRL.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_learned (1).executor": "Run",
-    "Python.test_learned.executor": "Run",
-    "Python.train (1).executor": "Run",
-    "Python.train.executor": "Run",
-    "Python.train_20240101.executor": "Run",
-    "Python.train_20240315.executor": "Run",
-    "Python.training (1).executor": "Run",
-    "Python.training.executor": "Run",
-    "Python.updateAdjMat.executor": "Run",
-    "Python.validate.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/work/Job Shop Scheduling - Benchmark/L2D-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyDependenciesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.PPO_jssp_multiInstances.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.env_test (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.env_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.env_training.executor&quot;: &quot;Run&quot;,
+    &quot;Python.machine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parser_jsp_fsp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.permissibleLS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_FJSP_DRL (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_FJSP_DRL.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_Nips_JSP.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_learned (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_learned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_learned_on_benchmark.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_20240101.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_20240315.executor&quot;: &quot;Run&quot;,
+    &quot;Python.training (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.training.executor&quot;: &quot;Run&quot;,
+    &quot;Python.updateAdjMat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.validate.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/Job Shop Scheduling - Benchmark/L2D-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\data\jsp\nips" />
@@ -117,7 +101,7 @@
       <recent name="D:\work\Job Shop Scheduling - Benchmark\job-shop-benchmark-new-env\solutions\FJSP_DRL\save\train_20240314_192906" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.training">
+  <component name="RunManager" selected="Python.run_Nips_JSP">
     <configuration name="env_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
@@ -141,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="permissibleLS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="machine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,12 +134,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scheduling_environment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/permissibleLS.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scheduling_environment/machine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,7 +148,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_20240315" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="run_Nips_JSP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FJSP-NewEnv" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,12 +157,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/train_20240315.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_Nips_JSP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_learned_on_benchmark" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="L2D-main" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../L2D-main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../L2D-main/test_learned_on_benchmark.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,36 +217,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="updateAdjMat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FJSP-NewEnv" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions/JSP_Nips" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/JSP_Nips/updateAdjMat.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.training" />
-        <item itemvalue="Python.train_20240315" />
+        <item itemvalue="Python.run_Nips_JSP" />
+        <item itemvalue="Python.test_learned_on_benchmark" />
         <item itemvalue="Python.env_test (1)" />
-        <item itemvalue="Python.updateAdjMat" />
-        <item itemvalue="Python.permissibleLS" />
+        <item itemvalue="Python.machine" />
+        <item itemvalue="Python.training" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +250,9 @@
       <workItem from="1710517528710" duration="5272000" />
       <workItem from="1710915015259" duration="17385000" />
       <workItem from="1710952063953" duration="3756000" />
-      <workItem from="1710994440528" duration="26923000" />
+      <workItem from="1710994440528" duration="27158000" />
+      <workItem from="1711973792310" duration="760000" />
+      <workItem from="1712058105492" duration="5126000" />
     </task>
     <servers />
   </component>
@@ -286,17 +272,20 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_training.coverage" NAME="env_training 覆盖结果" MODIFIED="1710512797855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test_learned_on_benchmark.coverage" NAME="test_learned_on_benchmark 覆盖结果" MODIFIED="1712065047211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../L2D-main" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test.coverage" NAME="test 覆盖结果" MODIFIED="1710428655132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240315.coverage" NAME="train_20240315 覆盖结果" MODIFIED="1711024544337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL__1_.coverage" NAME="run_FJSP_DRL (1) 覆盖结果" MODIFIED="1710430832434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$test_learned.coverage" NAME="test_learned 覆盖结果" MODIFIED="1710927720106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../L2D-7b2efbb1ffc960260b16952f2bed68e500765bf0" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$machine.coverage" NAME="machine 覆盖结果" MODIFIED="1712062316003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scheduling_environment" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_Nips_JSP.coverage" NAME="run_Nips_JSP 覆盖结果" MODIFIED="1712065052696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train_20240101.coverage" NAME="train_20240101 覆盖结果" MODIFIED="1710392301578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$permissibleLS.coverage" NAME="permissibleLS 覆盖结果" MODIFIED="1710997594254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1710411573096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$run_FJSP_DRL.coverage" NAME="run_FJSP_DRL 覆盖结果" MODIFIED="1710428304030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Job_Shop_Scheduling_Benchmark_Environments_and_Instances-main" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test.coverage" NAME="env_test 覆盖结果" MODIFIED="1710427622110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$updateAdjMat.coverage" NAME="updateAdjMat 覆盖结果" MODIFIED="1711011746403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
-    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test__1_.coverage" NAME="env_test (1) 覆盖结果" MODIFIED="1711022093106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
+    <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$env_test__1_.coverage" NAME="env_test (1) 覆盖结果" MODIFIED="1712064159657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training.coverage" NAME="training 覆盖结果" MODIFIED="1711024956627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$train.coverage" NAME="train 覆盖结果" MODIFIED="1710333854568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/FJSP_DRL" />
     <SUITE FILE_PATH="coverage/job_shop_benchmark_new_env$training__1_.coverage" NAME="training (1) 覆盖结果" MODIFIED="1710489597961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solutions/JSP_Nips" />
