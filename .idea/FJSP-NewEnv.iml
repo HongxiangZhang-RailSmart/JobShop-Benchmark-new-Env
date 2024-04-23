@@ -6,6 +6,6 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (final code)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="L2D-main" />
+    <orderEntry type="module" module-name="FFSP_MatNet" />
   </component>
 </module>
