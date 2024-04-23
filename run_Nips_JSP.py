@@ -5,7 +5,7 @@ def main(execute_mode):
     if execute_mode == 'train':
         training.main()
     if execute_mode == 'test':
-        test.main(test_mode='benchmark', instance_class='taillard')
+        test.main(test_mode='benchmark', instance_class='dmu')
         # optional test_mode and instance_class:
         # 1 generatedData generatedData
         # 2 benchmark dmu
@@ -15,6 +15,6 @@ def main(execute_mode):
         # please specify the test file in configs
 
 if __name__ == "__main__":
-    main('train')
+    main('test')
     # 'train' for training with JSSP_Env
     # 'test' for test using trained network with test_env (JobShopModule)
