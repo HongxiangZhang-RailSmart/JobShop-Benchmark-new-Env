@@ -60,8 +60,7 @@ class Machine:
         setup_time = 0
         if len(self.scheduled_operations) != 0:
             setup_time = \
-                sequence_dependent_setup_times[self.machine_id][self.scheduled_operations[-1].operation_id][
-                    operation.operation_id]
+                sequence_dependent_setup_times[self.machine_id][self.scheduled_operations[-1].operation_id][operation.operation_id]
         start_time = max(finishing_time_predecessors, finishing_time_machine + setup_time)
         operation.add_operation_scheduling_information(self.machine_id, start_time, setup_time, processing_time)
 

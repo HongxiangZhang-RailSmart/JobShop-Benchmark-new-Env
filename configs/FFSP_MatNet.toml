@@ -1,47 +1,77 @@
 [env_params]
-stage_cnt = 3
-machine_cnt_list = [4, 4, 4]
-job_cnt = 20
-process_time_low = 2
-process_time_high = 10
-pomo_size = 24
+    stage_cnt = 3
+    machine_cnt_list = [4, 4, 4]
+    job_cnt = 20
+    pomo_size = 24
+    [env_params.process_time_params]
+        time_low = 2
+        time_high = 10
+
 
 [model_params]
-stage_cnt = 3
-machine_cnt_list = [4, 4, 4]
-embedding_dim = 256
-sqrt_embedding_dim = 16
-encoder_layer_num = 3
-qkv_dim = 16
-sqrt_qkv_dim = 4
-head_num = 16
-logit_clipping = 10
-ff_hidden_dim = 512
-ms_hidden_dim = 16
-ms_layer1_init = (1/2)**(1/2)
-ms_layer2_init = 0.25
-eval_type = 'argmax'
-one_hot_seed_cnt = 4
+    stage_cnt = 3
+    machine_cnt_list = [4, 4, 4]
+    embedding_dim = 256
+    sqrt_embedding_dim = 16
+    encoder_layer_num = 3
+    qkv_dim = 16
+    sqrt_qkv_dim = 4
+    head_num = 16
+    logit_clipping = 10
+    ff_hidden_dim = 512
+    ms_hidden_dim = 16
+    ms_layer1_init = 0.7071067811865475
+    ms_layer2_init = 0.25
+    eval_type = 'argmax'
+    one_hot_seed_cnt = 4
 
 [optimizer_params]
-lr = 1e-4
-weight_decay = 1e-6
-milestones = [101, 151]
-gamma = 0.1
+    [optimizer_params.optimizer]
+        lr = 1e-4
+        weight_decay = 1e-6
+    [optimizer_params.scheduler]
+        milestones = [101, 151]
+        gamma = 0.1
 
 [trainer_params]
-use_cuda = True
-cuda_device_num = 0
-epochs = 100
-train_episodes = 1000
-train_batch_size = 50
-model_save_interval = 100
-img_save_interval = 100
-json_foldername = 'log_image_style'
-filename1 = 'style.json'
-filename2 = 'style_loss.json'
-enable = False
+    use_cuda = true
+    cuda_device_num = 0
+    epochs = 100
+    train_episodes = 1000
+    train_batch_size = 50
+    [trainer_params.logging]
+        model_save_interval = 100
+        img_save_interval = 100
+        [trainer_params.logging.log_image_params_1]
+            json_foldername = 'log_image_style'
+            filename = 'style.json'
+        [trainer_params.logging.log_image_params_2]
+            json_foldername = 'log_image_style'
+            filename = 'style_loss.json'
+    [trainer_params.model_load]
+        enable = false
 
 [logger_params]
-desc = 'matnet_train'
-filename = 'log.txt'
+    [logger_params.log_file]
+        desc = 'matnet_train'
+        filename = 'log.txt'
+
+[tester_params]
+    use_cuda = true
+    cuda_device_num = 0
+    # saved_problem_folder = "/ffsp"
+    saved_problem_folder = "/data/ffsp/"
+    saved_problem_filename = 'unrelated_10000_problems_444_job20_2_10.pt'
+    problem_count = 1000
+    test_batch_size = 1000
+    augmentation_enable = true
+    aug_factor = 10
+    aug_batch_size = 50
+    [tester_params.model_load]
+        path = '/save/FFSP_MatNet/saved_ffsp20_model/'
+        epoch = 100
+
+[test_logger_params]
+    [test_logger_params.log_file]
+        desc = 'matnet_test'
+        filename = 'log.txt'

@@ -211,6 +211,17 @@ class JobShop:
                 f"Invalid machine ID {machine_id}")
 
         machine.add_operation_to_schedule(operation, duration, self._sequence_dependent_setup_times)
+        operation.job.schedule_operation(operation)
+
+    def schedule_operation_on_machine_at_certain_time(self, operation: Operation, machine_id, duration, schedule_time) -> None:
+        machine = self.get_machine(machine_id)
+        if machine is None:
+            raise ValueError(
+                f"Invalid machine ID {machine_id}")
+        
+        machine.add_operation_to_schedule_at_time(operation, schedule_time, duration, 0)
+        operation.job.schedule_operation(operation)
+        self.scheduled_operations.append(operation)
 
     def mark_operation_as_scheduled(self, operation: Operation) -> None:
         """Mark an operation as scheduled."""

@@ -43,3 +43,6 @@ class Job:
         for operation in self._operations:
             if operation.operation_id == operation_id:
                 return operation
+
+    def schedule_operation(self, operation: Operation):
+        self._scheduled_operations.append(operation)

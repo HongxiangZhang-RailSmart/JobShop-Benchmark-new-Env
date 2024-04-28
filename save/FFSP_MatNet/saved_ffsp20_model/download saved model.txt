@@ -1,0 +1,5 @@
+Please down the saved model 'checkpoint-100.pt' using the below link:
+
+https://drive.google.com/drive/folders/1091JQMZmYjYn1BiqDYqDt6u_qrVTtY9F
+
+Please save the .pt file at  ./save/FFSP_MatNet/saved_ffsp20_model/
