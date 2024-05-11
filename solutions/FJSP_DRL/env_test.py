@@ -195,7 +195,7 @@ class FJSPEnv_test():
             operation = env.operations[ope_idx]
             duration = operation.processing_times[mac_idx]
             env.schedule_operation_on_machine(operation, mac_idx, duration)
-            env.get_job(operation.job_id).scheduled_operations.append(operation)
+            # env.get_job(operation.job_id).scheduled_operations.append(operation)
 
         # Removed unselected O-M arcs of the scheduled operations
         remain_ope_ma_adj = torch.zeros(size=(self.batch_size, self.num_mas), dtype=torch.int64)
